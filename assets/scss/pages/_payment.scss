@@ -1,0 +1,173 @@
+.payment-card-swiper{
+    margin: 0 -15px;
+    padding: 0 15px 40px;
+}
+
+.payment-card{
+    * {
+        font-family: var(--font-family-base);
+    }
+	width: 100%;
+    border-radius: 18px;
+    background-color: #47886B;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.10);
+	overflow: hidden;
+	padding: 15px;
+    &.style-2{
+        margin-bottom: 20px;
+        .card-info{
+            margin-bottom: 40px;
+        }
+        .card-number{
+            margin-bottom: 30px;
+            letter-spacing: 3px;
+        }
+    }
+    &.bg-2{
+        background: #66A589;
+    }
+    .card-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        .card-title{
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1.2px;
+            margin-bottom: 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        .activity{
+           display: inline-block;
+           margin-right: 8px;
+        }
+    }
+    .card-number{
+        color: #FFF;
+        font-weight: 500;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    .bottom-info{
+        display: flex;
+        align-items: end;
+        .holder-name{
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            font-size: 14px;
+            flex: 1;
+            font-weight: 500;
+        }
+        .card-about{
+            color: #fff;
+            span{
+                display: block;
+            }
+            small{
+                display: block;
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+// Payment Style Start ===
+// Search ===
+.search-input{
+	margin-bottom: 0;
+	align-items: center;
+	.search-icon{
+		font-size: 22px;
+	}
+	.form-control{
+		background-color: transparent;
+		border: 0;
+	}
+}
+
+
+.add-bank{
+	.offcanvas-header{
+		padding: 5px 15px;
+	}
+	.offcanvas-body{
+		background-color: var(--body-bg);
+	}
+	.card{
+		.card-body{
+			.media{
+				margin: 15px auto;
+			}
+		}
+	}
+}
+
+.item-list{
+	display: table;
+	.list{
+		padding: 6px 0;
+		width: 50%;
+		float: left;
+		a{
+			font-size: 15px;
+			font-weight: 400;
+			color: var(--title);
+			white-space: nowrap;
+		}
+	}
+}
+// Payment Style End ===
+
+// Review Area ===
+.rating-area{
+    margin: 30px 0;
+    text-align: center;
+    .title{
+        margin-bottom: 6px;
+    }
+    .dz-text{
+        margin-bottom: 12px;
+        font-size: 16px;
+        color: var(--text-light);
+        text-transform: capitalize;
+    }
+    .dz-star-rating{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        li{ 
+            i{
+                font-size: 32px;
+                color: var(--bg-white);
+                filter: drop-shadow(0px 10px 8px rgba(150, 184, 169, 0.45));
+            }
+            svg{
+                width: 32px;
+                height: 32px;
+            } 
+            &.active{
+                i{
+                    color: #FFA048;
+                    filter: drop-shadow(0px 10px 8px rgba(255, 160, 72, 0.45));
+                }
+                svg{
+                    path{
+                        stroke: #FFB444;
+                        fill: #FFEC8A;  
+                    }
+                }
+            }
+        }
+    }
+} 

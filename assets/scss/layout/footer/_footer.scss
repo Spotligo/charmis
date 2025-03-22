@@ -1,0 +1,219 @@
+//FOOTER ====
+.footer{
+    height: auto;
+    align-items: center;
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    
+	&.fixed{
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        z-index: 9999;
+        position: fixed;
+		
+        .btn{
+            .cart{
+                transform: scale(1.5);
+            }
+        }
+    }
+    &.transparent{
+        background-color: #e5eff5;        
+    }
+	&.shadow{
+		box-shadow: 0px 0px 30px 0px rgba(69, 41, 1, 0.10)!important;
+	}
+}
+
+
+//Menu style ======
+.menubar-area{
+	padding: 0;
+	position: unset;
+	background-color: rgba(255, 255, 255, 0.75)!important;
+	filter: drop-shadow(0px -16px 30px rgba(55, 84, 71, 0.4));
+	height: 56px;
+	border-radius: var(--border-radius-md);
+	backdrop-filter: blur(10px);
+    &.footer-fixed{
+		position: fixed !important;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		margin: 10px;
+	}
+	.toolbar-inner {
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        max-width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+        align-items: center;
+		.circle{
+			position: relative;
+			display: flex;
+			align-items: center;
+			&::after{
+				content: "";
+				position: absolute;
+				top: 0;
+				right: -5px;
+				width: 12px;
+				height: 12px;
+				background-color: #FFA902;
+				border: 2px solid var(--primary);
+				border-radius: 50%
+			}
+		}
+        .nav-link,
+		.menu-toggler{
+			position: relative;
+            color: var(--title);
+			text-align: center;
+			width: 20%;
+			padding: 0 0;
+			font-size: 18px;
+			svg{
+				width: 24px;
+				height: 24px;
+				path{
+					fill: #7d8fab;
+				}
+			}
+			&.active{
+				svg{
+					path{
+						fill: var(--primary);
+					}
+				}
+			}
+			&.item-active{
+				width: 55px;
+				min-width: 55px;
+				height: 55px;
+				font-size: 24px;
+				color: #fff;
+				font-weight: 900;
+				background: var(--primary);
+				line-height: 45px;
+				text-align: center;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50px;
+				svg{
+					path{
+						fill: #fff;
+					}
+				}
+			}
+            .title{
+                display: block;
+                margin-top: 5px;
+                font-weight: 500;
+                font-size: 12px;
+            }
+        }
+    }
+	.menubar-nav{
+		.nav-link{
+			padding: 5px;
+			color: rgba(0, 0, 0, 0.7);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 6px;
+			.name{
+				font-weight: 500;
+				display: none;
+				font-size: 12px;
+				color: var(--title);
+				text-transform: uppercase;
+			}
+			span{
+				font-size: 12px;
+				display: block;
+			}
+			.cart-badge{
+				width: 16px;
+				height: 16px;
+				background-color: #FF3131;
+				position: absolute;
+				top: 14px;
+				color: #fff;
+				border-radius: 10px;
+				font-size: 10px;
+				line-height: 16px;
+				text-align: center;
+				right: 17px;
+				z-index: 1;
+			}
+			i{
+				font-size: 18px;
+				height: 48px;
+				width: 48px;
+				margin: 0 auto;
+				color: var(--secondary);
+				text-align: center;
+				border-radius: 50%;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transform: scale(1.1);
+				position: relative;
+				&::after{
+					content: "";
+					position: absolute;
+					top: -7px;
+					left: 50%;
+					width: 82px;
+					height: 26px;
+					z-index: -1;
+					display: none;
+					background-image: url('../images/shape.svg');
+					background-size: contain;
+					background-repeat: no-repeat;
+					transform: translateX(-50%);
+				}
+			}
+			&.active{
+				color: var(--primary);
+				.name{
+					display: inline-block;
+				}
+				i{
+					color: #fff;
+					margin-top: -22px;
+					background: var(--primary);
+					transform: unset;
+					&::after{
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// Footer Fixed Button ==
+.footer-fixed-btn{
+	position: fixed;
+    background-color: var(--bg-white-2);
+    bottom: 60px;
+    left: 50%;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    box-shadow: 0px 0px 30px 0px rgba(69, 41, 1, 0.1);
+    z-index: 9;
+    transform: translateX(-50%);
+	border-radius: 20px 20px 0 0;
+} 

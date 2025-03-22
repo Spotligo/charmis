@@ -1,0 +1,372 @@
+.dz-card{
+    border-radius: var(--border-radius-xl);
+    background: var(--bg-white-2);
+    box-shadow: 0px 20px 50px 0px rgba(150, 184, 169, 0.25);
+    backdrop-filter: blur(5.5px);
+    height: 100%;
+    overflow: hidden;
+    .dz-content{
+        padding: 6px 15px 15px;
+    }
+    .dz-price{
+        font-size: 18px;
+        font-family: var(--font-family-title);
+        color: var(--title);
+        del{
+            color: var(--text-light);
+            font-size: 14px;
+        }
+    }
+    .category-tag{
+        position: absolute;
+        top: 50%;
+        left: -68px;
+        background-color: var(--bg-white);
+        backdrop-filter: blur(10px);
+        border-radius: var(--border-radius-xl);
+        color: var(--title);
+        padding: 10px 15px;
+        width: 100%;
+        min-width: 184px;
+        transform: translateY(-50%) rotate(90deg);
+        text-align: center;
+        font-size: 16px;
+        .items{
+            margin-left: 5px;
+        }
+    }
+    .dz-offer{
+        font-size: 13px;
+        font-weight: 600;
+        color: #16985E;
+        text-transform: capitalize;
+        display: block;
+    }
+    .dz-meta{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        line-height: 1;
+        li{
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+        }
+        .dz-status{
+            color: #16985E;
+            font-weight: 500;
+            font-size: 13px;
+        }
+        .dz-review{
+            span{
+                font-size: 12px;
+                color: var(--text-light);
+            } 
+            i{
+                color: #FFA048;
+                font-size: 12px;
+            }
+        }
+    }
+    .dz-status{
+        font-weight: 500;
+    }
+    .dz-off{
+        font-weight: 500;
+        color: #F14336;
+    }
+    .remove-text{
+        font-size: 15px;
+        color: #B75151;
+    }
+    .cart-btn{
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--dark);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-radius: var(--border-radius-xl) 0 0 0;
+        font-size: 24px;
+        color: var(--theme-text-color);
+        svg{
+            path{
+                fill: var(--theme-text-color);
+            }
+        }
+    }
+    .info-btn{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    // Lsit Style ==
+    &.list-style{
+        display: flex;
+        gap: 5px;
+        .dz-content{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+			width: 100%;
+            padding: 10px;
+			margin: auto 0;
+        }
+		.dz-media{
+			width: 120px;
+			min-width: 120px;
+			height: auto;
+			img{
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+    }
+    // Style 2 ==
+    &.style-2{
+        background-color: transparent;
+        box-shadow: unset;
+        border-radius: unset;
+        text-align: center;
+        .dz-media{
+            border-radius: calc(var(--border-radius-xl) * 2);
+            max-width: 127px;
+            margin: auto;
+        }
+        .dz-content{
+            padding: 10px 15px;
+        }
+        .dz-price{
+            font-size: 16px;
+            font-family: var(--font-family-base);
+            font-weight: 600;
+            del{
+                font-size: 13px;
+                font-weight: 400;
+            }
+        }
+    }
+    // Style 3 ==
+    &.style-3{
+        padding: 15px;
+		align-items: center;
+        .dz-media{
+			width: 76px;
+			min-width: 76px;
+			height: 115px;
+        }
+        .dz-content{
+            padding: unset;
+			gap: 8px;
+            .title{
+                margin-bottom: 0;
+				font-size: 16px;
+            }
+        }
+        .dz-price{
+            font-size: 16px;
+            font-family: var(--font-family-base);
+            font-weight: 600;
+            del{
+                font-size: 13px;
+                font-weight: 400;
+            }
+        }
+    }
+    // Style 4 ==
+    &.style-4{
+        padding: 15px 10px;
+        .title{
+            padding: 0 30px 0px 5px;
+        }
+        .dz-media{
+            width: 115px;
+            margin: 0 auto 12px;
+        }
+        .dz-price{
+            font-size: 16px;
+            font-family: var(--font-family-base);
+            font-weight: 600;
+            del{
+                font-size: 13px;
+                font-weight: 400;
+            }
+        }
+    }
+    // Style 5 ==
+    &.style-5{
+       .dz-content{
+            display: flex;
+            align-items: end;
+       }
+       .title{
+        margin-bottom: 0;
+        padding-right: 20px;
+       }
+       .dz-price{
+            font-size: 18px;
+            font-family: var(--font-family-base);
+            font-weight: 600;
+            line-height: 1.2;
+            del{
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+    // Style 6 ==
+    &.style-6{
+        .title{
+            margin-bottom: 5px;
+        }
+        .dz-meta{
+            margin-bottom: 12px;
+        }
+    }
+    // Style 6 ==
+    &.style-7{
+        .dz-content{
+			width: 100%;
+			.title{
+                margin-bottom: 0;
+            }
+            position: relative;     
+        }
+		.dz-media{
+			width: 120px;
+			min-width: 120px;
+			height: auto;
+		}
+        .info-btn{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            border-radius: var(--border-radius-sm);
+        } 
+    }
+}
+
+//Product Swiper ===
+.dz-product-swiper{
+    margin-top: -30px;
+    .swiper-wrapper{
+        padding: 30px 15px 60px;
+        .swiper-slide{
+            width: 190px;
+        }
+    }
+}
+
+// Cart List ==
+.cart-list{
+    display: flex;
+    align-items: center;
+    .dz-media{
+        border: 1px solid #AFCBBF;
+        border-radius: var(--border-radius-md);
+        margin-right: 10px;
+    }
+    .title{
+        margin-bottom: 0;
+    }
+    .dz-content{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;        
+        flex: 1;
+    }
+    .dz-meta{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        li{
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .dz-price{
+            font-size: 16px;
+            font-weight: 600;
+            del{
+                font-size: 13px;
+                font-weight: 400;
+                color: var(--text-light);
+            }
+        }
+        .dz-review{
+            span{
+                font-size: 12px;
+                color: var(--text-light);
+            } 
+            i{
+                color: #FFA048;
+                font-size: 12px;
+            }
+        }
+    }
+    .dz-quantity{
+        font-size: 14px;
+        .quantity{
+            font-weight: 700;
+        }
+    }
+    .dz-icon{
+        background-color: var(--body-bg);
+        color: var(--title);
+        border-radius: 50%;
+        box-shadow: unset;
+        i{
+            font-weight: 600;
+        }
+    }
+    &.style-2{
+        background-color: var(--bg-white-2);
+        border-radius: var(--border-radius-xl);
+        backdrop-filter: blur(10px);
+        padding: 10px;
+        box-shadow: 0 20px 50px 0 rgba(150, 184, 169, 0.25);
+        .dz-media{
+            border: 0;
+        }
+        .dz-off{
+            font-size: 13px;
+            color: #CC0D39;
+            font-weight: 600;
+        }
+    }
+}
+
+
+
+//Item Bookmark ==
+.item-bookmark{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #CFDBD6;
+    border-radius: 50%;
+    i{
+        color: #CFDBD6;
+    }
+    &.active{
+        i{
+            color: #ff2a4f;
+        }
+    }
+    &.icon-left{
+        left: 15px;
+        right: auto;
+    }
+    &.icon-right{
+        left: auto;
+        right: 15px;
+    }
+}
