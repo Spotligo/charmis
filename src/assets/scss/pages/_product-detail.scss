@@ -1,0 +1,124 @@
+// Filter Area ===
+.dz-product-filter{
+	height: 60px;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--bg-white-2);
+    backdrop-filter: blur(8px);
+	border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
+	box-shadow: 0px -20px 40px rgba(150, 184, 169, 0.25);
+	li{
+		padding: 5px 30px;
+		border-right: 1px solid var(--border-color);
+		> a{
+			font-size: 15px;
+			text-transform: uppercase;
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			i{
+				font-size: 16px;
+			}	
+		}
+	}
+}
+
+.filter-inner-content{
+	margin-bottom: 22px;
+	.title-bar{
+		margin-bottom: 10px;
+	}
+}
+
+
+//Product Detail ==
+.dz-product-preview{
+	position: relative;
+	overflow: hidden;
+	.product-detail-swiper{
+		border-radius: 0 0 30px 30px;
+	}
+}
+
+.dz-product-detail{
+	padding: 15px;
+	.detail-content{
+		margin-bottom: 30px;
+		.title{
+			padding-right: 16px;
+		}
+		.dz-top-meta{
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			li{
+				display: inline-flex;
+				align-items: center;
+				gap: 5px;
+				line-height: 1;
+			}
+			.brand-tag{
+				flex: 1;
+				font-size: 14px;
+			}
+			.dz-review{
+				font-size: 14px;
+				font-weight: 600;
+				.r-status{
+					font-weight: 400;
+					color: var(--text-light);
+				} 
+				i{
+					color: #FFA048;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.dz-select-btn{
+		gap: 8px;
+		display: flex;
+		align-items: center;
+		.form-check.style-2 .form-check-label{
+			padding: unset;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 15px;
+			font-weight: 400;
+		}
+	}
+	.item-wrapper{
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+		.dz-name{
+			font-weight: 500;
+		}
+		.dz-meta-items{
+			display: flex;
+			align-items: flex-start;
+			.dz-price{
+				.price{
+					font-size: 20px;
+					font-weight: 500;
+					display: inline-flex;
+					align-items: center;
+					gap: 5px;
+					del{
+						font-size: 15px;
+						font-weight: 400;
+						color: var(--text-light);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,241 @@
+.sidebar{
+    width: 300px;
+	height: 100%;
+    background-color: var(--body-bg);
+    position: fixed;
+    left: -300px;
+    top: 0;
+    z-index: 999999;
+	background-position: center;
+	background-size: cover;
+    @include transitionFast;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+	.inner-sidebar{
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		overflow-y: scroll;
+		scrollbar-width: none;		
+	}
+    &.show{
+        left: 0;
+    }
+    &.right{
+        left: auto;
+        right: -300px;
+        
+        &.show{
+            left: auto;
+            right: 0;            
+        }
+    }
+	.nav-label {
+		margin: 20px 0 0;
+		padding: 20px 0 8px;
+		text-transform: uppercase;
+		font-size: 14px;
+		letter-spacing: 0.05rem;
+		border-top: 1px solid var(--border-color);
+		color: var(--title);
+		font-weight: 600;
+	}
+	
+	
+	.author-box{
+		display: flex;
+		align-items: center;
+		padding: 20px;
+		border-bottom: 1px solid var(--border-color);
+		.dz-media{
+			border-radius: 20px;
+			width: 60px;
+			height: 60px;
+			overflow: hidden;
+			margin-right: 15px;
+		}
+		.name{
+			margin-bottom: 0;
+		}
+		.mail{
+			font-size: 15px;
+		}
+	}
+	.dz-icon{
+		i{
+			line-height: 1;
+			font-size: 20px;
+			color: var(--primary);	
+		}
+		svg{
+			fill: var(--primary);	
+		}
+	}
+	.navbar-nav{
+		padding: 15px 20px;
+		margin-bottom: 30px;
+		
+		& > .nav-label:first-child{
+			border-top: 0;
+			margin: 0;
+			padding-top: 0;
+		}
+		li{
+			padding: 5px 0;
+			.dz-icon{
+				margin-right: 15px;
+				border-radius: 12px;
+				box-shadow: 0px 14px 30px 0px rgba(150, 184, 169, 0.30);
+			}
+			& > a{
+				position: relative;
+				color: inherit;
+				display: flex;
+				padding: 0;
+				font-size: 18px;
+				align-items: center;
+				font-weight: 400;
+				color: #000;
+				&:after{
+					content: "\e844";
+					font-family: 'feather' !important;
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translateY(-50%);
+					font-weight: 500;
+					color: #000;
+					font-size: 20px;
+				}
+				.custom-switch{
+                    margin-left: auto;
+                    align-items: center;
+                    display: flex;
+                }
+				.badge{
+					margin-left: auto;
+					font-size: 10px;
+					min-width: 20px;
+					min-height: 20px;
+					padding: 0;
+					height: 20px;
+					line-height: 18px;
+				}
+			}
+		}
+	}
+
+	.sidebar-bottom{
+		margin-top: auto;	
+		.app-setting{
+			padding: 15px;
+			li{
+				padding-bottom: 10px;
+				&:last-child{					
+					padding-bottom: 0;
+				}
+				a{
+					display: flex;
+					align-items: center;
+				}
+				span{
+					font-weight: 500;
+					color: var(--title);
+				}
+			}
+			.color-active{
+				font-size: 12px;
+				color: var(--primary);
+				display: flex;	
+				align-items: center;
+				gap: 8px;	
+				span{
+					color: #666666;
+				}	
+				.current-color{
+					width: 16px;
+					height: 16px;
+					background: var(--primary);
+					border-radius: 4px;
+				}
+			}
+		}
+		.app-info{
+			padding: 15px;
+			border-top: 1px solid var(--border-color);
+			.name{
+				margin-bottom: 0;
+				font-size: 13px;
+				b{
+					font-weight: 600;
+				}
+			}
+			.ver-info{
+				font-size: 13px;
+			}
+		}
+	}
+}
+
+.dz-mode{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+    .theme-btn{
+		background-color: #D4E3DD;
+		width: 80px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		position: relative;
+		padding: 8px;
+		justify-content: space-between;
+		border-radius: 50px;
+		z-index: 1;
+        &::after{
+            content: "";
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            background: var(--bg-white);
+            z-index: -1;
+            transform: translateY(-50%);
+            @include transitionMedium;
+			box-shadow: 0 5px 5px 0 rgba(150, 184, 169, 0.35);
+        }
+        i{
+			font-size: 18px;
+			color: var(--title);
+			width: 30px;
+			height: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+        }
+        &.active{
+            &::after{
+                left: 42px;
+            }
+        }
+    }
+}
+
+.dark-overlay{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	@include transitionMedium;
+	z-index: 99999;
+	visibility: hidden;
+	&.active{
+		visibility: visible;
+		background: rgba(18, 11, 1, 0.50);
+		backdrop-filter: blur(15px);
+	}
+}

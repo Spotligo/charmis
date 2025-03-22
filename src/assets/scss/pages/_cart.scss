@@ -1,0 +1,204 @@
+.dz-total-area{
+    padding: 15px 15px 15px;
+    margin: 0 -15px;
+    border-bottom: 1px solid var(--rgba-primary-1);
+    &.fixed{
+        margin: 0;
+        position: fixed;
+        top: 60px;
+        left: 50%;
+        width: 100%;
+        max-width: 600px;
+        z-index: 8;
+        background-color: var(--body-bg);
+        transform: translateX(-50%);
+    }
+    .dz-text{
+        display: flex;
+        align-items: center;    
+        font-size: 15px;
+        font-weight: 500;
+        color: $success;
+        gap: 6px;
+        i{
+            width: 24px;
+            background-color: $success;
+            height: 24px;
+            border-radius: 50%;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+.total-prize{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    > li{
+        font-size: 18px;
+    }
+    .prize{
+        font-weight: 700;
+    }
+}
+
+.dz-cart-list{
+    position: relative;
+    height: 100%;
+    display: flex;
+    background-color: var(--bg-white-2);
+    box-shadow: 0px 20px 50px 0px rgba(150, 184, 169, 0.25);
+    backdrop-filter: blur(5.5px);
+    border-radius: var(--border-radius-xl);
+    overflow: hidden;
+    .dz-content{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+        height: 100%;
+        padding: 16px 15px;
+    }
+	.dz-media{
+		img{
+			height: 100%;
+			object-fit: cover;
+		}		
+	}
+    .title{
+        text-transform: capitalize;
+        margin-bottom: 0;
+    }
+    .dz-remove{
+        font-size: 14px;
+        color: var(--text-light);
+        i{
+            font-size: 16px;
+            margin-right: 4px;
+        }
+    }
+    .dz-meta{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        li{
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .dz-price{
+            font-size: 18px;
+            font-family: var(--font-family-title);
+            del{
+                font-size: 14px;
+                font-weight: 400;
+                color: var(--text-light);
+                line-height: normal;
+            }
+        }
+        .dz-review{
+            span{
+                font-size: 13px;
+                color: var(--text-light);
+            } 
+            i{
+                color: #FFA048;
+                font-size: 14px;
+            }
+        }
+        .dz-status{
+            color: #159E42;
+            font-weight: 500;
+            font-size: 12px;
+        }
+    }
+}
+
+// Checkout Area ==
+.view-cart{
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        li{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--title);
+            span{
+                font-size: 14px;
+                display: block;
+            }
+            .status{
+                color: #159E42;
+            }
+			.price{
+				color: var(--title);
+                margin-bottom: 0;
+                font-family: var(--font-family-base);
+                font-weight: 600;
+			}
+            &.dz-total{
+                border-top: 1px solid var(--primary);
+                padding-top: 15px;
+            }
+        }
+		.divider{
+			border-color: var(--border-color);
+		}
+    }
+}
+
+// Delivery Address ===
+.dz-add-box{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--bg-white-2);
+    border: 1px solid #BAD1C7;
+    padding: 14px 15px;
+    font-weight: 500;
+    font-size: 14px;
+    box-shadow: var(--box-shadow);
+    span{
+        flex: 1;
+    }
+    i{
+        color: var(--primary);
+        font-size: 20px;
+    }
+}
+
+
+.dz-list{
+    .pull_delete {
+        position: relative;
+        min-width: unset!important;
+    }
+    
+    .pull_delete.trans {
+        transition: all 0.4s;
+    }
+    
+    .pull_delete .pd_btn {
+        top: 0 !important;
+        right: -80px !important;
+        bottom: 0 !important;
+        width: 65px !important;
+        font-size: 24px !important;
+        background: var(--secondary) !important;
+        color: var(--theme-text-color) !important;
+        border-radius: 20px 0px 0px 20px;
+    }
+    
+    .pull_delete .pd_btn::before {
+        content: "\e8da";
+        font-family: 'feather' !important;
+        font-size: 24px !important;
+        font-weight: 500;
+        font-style: normal;
+    }
+}
